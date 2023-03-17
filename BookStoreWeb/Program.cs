@@ -1,4 +1,6 @@
 using BookStore.DataAccess;
+using BookStore.DataAccess.Repository.IRepository;
+using BookStore.DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	var serverVersion = ServerVersion.AutoDetect(configuration["ConnectionStrings:MainDB"]);
 	options.UseMySql(configuration["ConnectionStrings:MainDB"], serverVersion, options => options.EnableRetryOnFailure());
 });
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var app = builder.Build();
 
@@ -32,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+	pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
