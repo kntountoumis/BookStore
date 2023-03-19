@@ -2,7 +2,6 @@
 using BookStore.Models.ViewModels;
 using BookStore.DataAccess;
 using BookStore.Models;
-using BookStore.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
