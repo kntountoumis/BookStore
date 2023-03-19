@@ -1,7 +1,6 @@
 ﻿using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models.ViewModels;
 using BookStore.DataAccess;
-using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using BookStore.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
