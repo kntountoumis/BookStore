@@ -22,11 +22,8 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-
                             <a class="nav-link " asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
-
-
-
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
                             <div class="dropdown-menu">
@@ -37,6 +34,11 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class=nav-link asp-area="Admin" asp-controller="Order" asp-action="Index">
+                                Manage Order
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
