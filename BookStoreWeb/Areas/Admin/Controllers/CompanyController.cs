@@ -10,9 +10,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using BookStore.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookStoreWeb.Controllers;
 [Area("Admin")]
+[Authorize(Roles = SD.Role_Admin)]
 public class CompanyController : Controller
 {
 	private readonly IUnitOfWork _unitOfWork;
